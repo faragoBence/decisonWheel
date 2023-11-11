@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "8270978516",
+    "project_id": "league-pal",
+    "storage_bucket": "league-pal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8270978516:android:1a09fbd37d4535d77aca41",
+        "android_client_info": {
+          "package_name": "com.webnevelde.decision_wheel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8270978516-ovla57msrq9d3kr1096v0flamtq0fuvh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAprYhY_N029u8jHKXglojHzmYZPtWIdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8270978516-ovla57msrq9d3kr1096v0flamtq0fuvh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
