@@ -25,9 +25,7 @@ Future<void> main() async {
 
   Hive.registerAdapter(WheelAdapter());
   Hive.registerAdapter(WheelElementAdapter());
-
   await Hive.openBox('wheels');
-  Hive.box('wheels').delete(1);
   runApp(new MyApp());
 }
 

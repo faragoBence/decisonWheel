@@ -2,7 +2,7 @@
     package="com.webnevelde.decision_wheel">
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
    <application
-        android:label="decision_wheel"
+        android:label="Decision Wheel"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

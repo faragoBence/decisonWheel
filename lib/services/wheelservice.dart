@@ -30,15 +30,21 @@ class WheelService {
 
   saveWheel(BuildContext context, Wheel wheel) async {
     if (wheel.id == 0) {
-      wheel.id = Hive.box('wheels').length + 1;
+      int maxId = 0;
+      Hive.box('wheels').toMap().forEach((key, value) {
+        if (value.id > maxId) {
+          maxId = value.id;
+        }
+      });
+      wheel.id = maxId + 1;
     }
-    await Hive.box('wheels').put(wheel.id.toString() + wheel.name, wheel);
+    await Hive.box('wheels').put(wheel.id.toString(), wheel);
     await buildWheels(context);
     await Provider.of<WheelProvider>(context, listen: false).update(wheel);
   }
 
   deleteWheel(BuildContext context, Wheel wheel) async {
-    Hive.box('wheels').delete(wheel.id.toString() + wheel.name);
+    Hive.box('wheels').delete(wheel.id.toString());
     await buildWheels(context);
     await Provider.of<WheelProvider>(context, listen: false).reset();
   }
@@ -96,7 +102,7 @@ class WheelService {
       id: 1,
     );
 
-    await Hive.box('wheels').put('init_1', wheel);
+    await Hive.box('wheels').put('1', wheel);
 
     return wheel;
   }
@@ -120,7 +126,7 @@ class WheelService {
       id: 2,
     );
 
-    await Hive.box('wheels').put('init_2', wheel);
+    await Hive.box('wheels').put('2', wheel);
 
     return wheel;
   }
