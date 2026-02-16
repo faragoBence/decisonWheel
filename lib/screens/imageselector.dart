@@ -38,14 +38,14 @@ class _ImageSelectorState extends State<ImageSelector> {
         ),
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.save),
-            splashColor: Colors.transparent,
+            icon: const Icon(Icons.save, color: Colors.white,),
+            splashColor: Colors.white,
             highlightColor: Colors.transparent,
-            onPressed: () {
+            onPressed: () async {
               Wheel wheel =
                   Provider.of<WheelProvider>(context, listen: false).wheel;
               wheel.imageIndex = widget._selectedImageIndex;
-              Provider.of<WheelProvider>(context, listen: false).update(wheel);
+              await Provider.of<WheelProvider>(context, listen: false).update(wheel);
               Navigator.of(context).pop();
             },
           )

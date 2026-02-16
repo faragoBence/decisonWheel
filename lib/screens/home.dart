@@ -65,7 +65,7 @@ class Home extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(
-              top: _h * 0.8,
+              top: _h * 0.77,
               left: _w * 0.7,
             ),
             child: Row(

@@ -286,7 +286,7 @@ class _CreateWheelState extends State<CreateWheel> {
           ),
           Container(
             margin: EdgeInsets.only(
-              top: _h * 0.8,
+              top: _h * 0.77,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -382,7 +382,8 @@ class _CreateWheelState extends State<CreateWheel> {
                     }
                     wheel.wheelElements = items;
                     wheel.name = _nameController.text;
-                    wheel.imageIndex = wheel.imageIndex;
+                    wheel.id = wheel.id;
+                    wheel.imageIndex = Provider.of<WheelProvider>(context, listen: false).wheel.imageIndex;
                     await WheelService.instance.saveWheel(context, wheel);
                     Navigator.of(context).popUntil((route) => route.isFirst);
                   },
