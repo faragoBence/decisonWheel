@@ -1,4 +1,4 @@
-package com.example.decisionwheel
+package com.webnevelde.decision_wheel
 
 import io.flutter.embedding.android.FlutterActivity
 
